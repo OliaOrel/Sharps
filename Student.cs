@@ -18,8 +18,27 @@ namespace lab
     }
     public Education educationLevel { get; set; }
     public string group { get; set; }
-    public int record_book { get; set; }
     public Examination[] exams { get; set; }
+    private int number;
+    public int record_book
+    {
+      get
+      {
+        return number;
+      }
+
+      set
+      {
+        if (value < 99999 || value > 99999999)
+        {
+          throw new Exception("Uncorrect number of record book!");
+        }
+        else
+        {
+          number = value;
+        }
+      }
+    }
 
     public double avarage
     {

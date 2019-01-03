@@ -20,7 +20,14 @@ namespace lab
       student1.name = "Olha";
       student1.surname = "Orel";
       student1.group = "IP-71";
-      student1.record_book = 7123;
+      try
+      {
+        student1.record_book = 997123;
+      }
+      catch (Exception ex)
+      {
+        Console.WriteLine("ERROR: " + ex.Message);
+      }
       student1.birth_date = new DateTime(2000, 11, 20);
       student1.birth_year = 1999;
       student1.educationLevel = Student.Education.Bachelor;
@@ -50,7 +57,14 @@ namespace lab
       Student student2 = (Student)student1.clone();
       Console.Write("New student with the same information:\n");
       student2.PrintFullInfo();
-      student2.record_book = 7125;
+      try
+      {
+        student2.record_book = 997125;
+      }
+      catch (Exception ex)
+      {
+        Console.WriteLine("ERROR: " + ex.Message);
+      }
       student2.surname = "Doms";
       Console.Write("Student1 after changing student2:\n");
       student1.PrintFullInfo();
@@ -58,7 +72,15 @@ namespace lab
       student2.PrintFullInfo();
 
       Console.Write("\t=== Task 4. ===\n");
-
+      try
+      {
+        student2.record_book = 999997125;
+      }
+      catch (Exception ex)
+      {
+        Console.WriteLine("ERROR: " + ex.Message);
+      }
+      Console.Write("\n");
 
       Console.Write("\t=== Task 8. ===\n");
       Console.Write("Only exams:\n");
