@@ -39,7 +39,7 @@ namespace lab
       Examination[] exams = new Examination[3]{
         new Examination(),
         new Examination(1, "KDM", "Likhouzova T.M.", 99, true, new DateTime(2018, 1, 11)),
-        new Examination(3, "Phylosofy", "Kutsyk K.M.", 95, false, new DateTime(2017, 12, 23))
+        new Examination(3, "Phylosophy", "Kutsyk K.M.", 95, false, new DateTime(2017, 12, 23))
       };
 
       student1.AddExams(exams);
@@ -49,7 +49,6 @@ namespace lab
       Console.Write("\t=== C. ===\n");
 
       student1.PrintFullInfo();
-      Console.Write("\n");
 
       Console.Write("\t=== D. ===\n");
 
